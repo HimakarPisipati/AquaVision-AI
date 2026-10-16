@@ -1,0 +1,188 @@
+================================================================================
+THIRD-PARTY ACKNOWLEDGEMENTS & ATTRIBUTION NOTICE
+================================================================================
+
+Project: Plastic Waste Detection on Water Bodies Using Deep Learning
+Purpose: Educational and Academic Portfolio (Final-Year B.Tech CSE Project)
+Pipeline: YOLOv8m Object Detection + SAM 2.1 Small Prompted Instance Segmentation
+
+This document details third-party software, pretrained model weights, datasets,
+research publications, source repositories, and external assets incorporated or
+utilized in this repository.
+
+--------------------------------------------------------------------------------
+1. GENERAL STATEMENT
+--------------------------------------------------------------------------------
+This project combines original custom software implementation, experimental
+notebook workflows, and integration glue code with third-party open-source tools,
+deep learning models, and publicly hosted research datasets.
+
+IMPORTANT NOTICE:
+Acknowledgement and attribution in this document do NOT constitute or replace
+formal legal compliance with each respective third-party license or agreement.
+Downstream users, evaluators, and contributors remain individually responsible
+for ensuring their specific deployment, execution, or redistribution conforms
+with each respective provider's terms and conditions.
+
+--------------------------------------------------------------------------------
+2. DEEP LEARNING ARCHITECTURES & MODEL WEIGHTS
+--------------------------------------------------------------------------------
+
+A. Ultralytics YOLOv8 (YOLOv8m Architecture & Pretrained Checkpoints)
+   - Component: YOLOv8m neural network architecture and pretrained COCO weights
+   - Author / Organization: Ultralytics Inc. (Glenn Jocher and contributors)
+   - Official Source URL: https://github.com/ultralytics/ultralytics
+   - Upstream Documentation: https://docs.ultralytics.com/
+   - License: GNU Affero General Public License v3.0 (AGPL-3.0) / Enterprise Commercial
+   - Verified Checkpoints Used:
+     * Pretrained base initialization: 'yolov8m.pt' (initialized from Ultralytics)
+     * Fine-tuned project artifact: 'models/yolov8m_best.pt' (trained on FloW dataset)
+   - Usage Type: Open-source dependency and fine-tuned detector checkpoint.
+   - Compliance / Redistribution Notes:
+     Ultralytics licenses YOLOv8 under AGPL-3.0 for open-source use. Under AGPL-3.0,
+     any software that integrates, links, or modifies YOLOv8 and is distributed or
+     served over a network must make its full corresponding source code available
+     under AGPL-3.0, unless a separate enterprise commercial license is obtained
+     from Ultralytics. The fine-tuned weights ('yolov8m_best.pt') are derived from
+     the YOLOv8m architecture trained on the FloW dataset.
+
+B. Meta Segment Anything Model 2 (SAM 2 / SAM 2.1)
+   - Component: SAM 2.1 Hiera Small neural architecture and predictor APIs
+   - Author / Organization: Meta AI Research (FAIR)
+   - Official Source URL: https://github.com/facebookresearch/sam2
+   - Upstream Paper: Ravi et al., "SAM 2: Segment Anything in Images and Videos", 2024
+   - License (Source Code): Apache License 2.0
+   - License (Model Checkpoints): Apache License 2.0
+   - Verified Checkpoints Used:
+     * 'models/sam2/sam2.1_hiera_small.pt'
+     * Official Checkpoint URL: https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_small.pt
+     * Checkpoint Configuration: 'configs/sam2.1/sam2.1_hiera_s.yaml'
+   - Usage Type: Zero-shot promptable segmentation foundation model (CPU-based inference).
+   - Compliance / Redistribution Notes:
+     Source code and model weights are provided by Meta under the Apache-2.0 license.
+     Redistribution requires preserving copyright notices, license copies, and disclaimers.
+     Due to file size (184.4 MB), users are instructed to download the checkpoint directly
+     from Meta's official URL rather than bundling it into standard Git commits.
+
+--------------------------------------------------------------------------------
+3. DATASET ATTRIBUTION & CITATION
+--------------------------------------------------------------------------------
+
+A. FloW: Floating Waste Detection in Inland Waters Dataset
+   - Dataset Title: FloW (Floating Waste) Dataset / flow - v1 new version
+   - Export Platform / Host: Roboflow Universe (Workspace: 'waste-detection-zxduh', Project: 'flow-9dt9s-ysldg')
+   - Roboflow Universe URL: https://universe.roboflow.com/waste-detection-zxduh/flow-9dt9s-ysldg/dataset/1
+   - Dataset License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+     https://creativecommons.org/licenses/by/4.0/
+   - Original Authors & Academic Citation:
+     Yuwei Cheng, Jiannan Zhu, Mengxin Jiang, Jie Fu, Changsong Pang, Peidong Wang,
+     Kris Sankaran, Olawale Onabola, Yimin Liu, Dianbo Liu, Yoshua Bengio.
+     "FloW: A Dataset and Benchmark for Floating Waste Detection in Inland Waters."
+     Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV),
+     October 2021, pages 10953-10962.
+   - Dataset Class: Single class 'bottle' (Class ID 0)
+   - Dataset Image Counts: 4,803 total images (4,202 train, 401 valid, 200 test)
+   - Format: YOLO object-detection normalized bounding box coordinates
+   - Usage Type: Model fine-tuning, validation, and test benchmarking.
+   - Compliance / Attribution Requirements under CC BY 4.0:
+     You are free to share (copy and redistribute) and adapt (remix, transform, and build upon)
+     the material for any purpose, provided you give appropriate credit, provide a link to
+     the license, and indicate if changes were made. In this project, bounding box labels
+     were audited and dataset paths were unified in 'results/data_corrected.yaml'.
+     Private Roboflow API keys and tokens are strictly excluded from version control.
+
+--------------------------------------------------------------------------------
+4. CORE SOFTWARE LIBRARIES & RUNTIME DEPENDENCIES
+--------------------------------------------------------------------------------
+
+A. Python
+   - Organization: Python Software Foundation (PSF)
+   - Official URL: https://www.python.org/
+   - License: Python Software Foundation License (PSF License)
+
+B. PyTorch ('torch', 'torchvision')
+   - Organization: Meta AI / PyTorch Foundation (Linux Foundation)
+   - Official URL: https://pytorch.org/
+   - License: Modified BSD License (3-Clause BSD)
+
+C. OpenCV Headless ('opencv-python-headless')
+   - Organization: OpenCV team
+   - Official URL: https://opencv.org/
+   - License: Apache License 2.0
+
+D. Pillow ('PIL')
+   - Organization: Jeffrey A. Clark (Alex) and contributors
+   - Official URL: https://python-pillow.org/
+   - License: Historical Permission Notice and Disclaimer (HPND / MIT-equivalent)
+
+E. NumPy ('numpy')
+   - Organization: NumPy Developers
+   - Official URL: https://numpy.org/
+   - License: BSD 3-Clause "New" or "Revised" License
+
+F. Pandas ('pandas')
+   - Organization: The Pandas Development Team
+   - Official URL: https://pandas.pydata.org/
+   - License: BSD 3-Clause "New" or "Revised" License
+
+G. Matplotlib ('matplotlib')
+   - Organization: The Matplotlib Development Team (John D. Hunter)
+   - Official URL: https://matplotlib.org/
+   - License: Matplotlib License (BSD-compatible PSF-based license)
+
+H. PyYAML ('yaml')
+   - Organization: Kirill Simonov and contributors
+   - Official URL: https://pyyaml.org/
+   - License: MIT License
+
+I. Hydra Core ('hydra-core') & iopath ('iopath')
+   - Required by: Meta SAM 2 repository
+   - Organizations: Facebook Research / Meta Platforms Inc.
+   - Licenses: MIT License (Hydra) / Apache License 2.0 (iopath)
+
+J. FastAPI & Uvicorn (Backend web service dependencies)
+   - Authors: Sebastián Ramírez (FastAPI), Encode OSS (Uvicorn)
+   - Official URLs: https://fastapi.tiangolo.com/ , https://www.uvicorn.org/
+   - Licenses: MIT License (FastAPI) / BSD 3-Clause (Uvicorn)
+
+--------------------------------------------------------------------------------
+5. DEVELOPMENT & COMPUTATIONAL PLATFORMS
+--------------------------------------------------------------------------------
+
+A. Google Colaboratory (Google Colab)
+   - Organization: Google LLC
+   - Official URL: https://colab.research.google.com/
+   - Terms: Google Terms of Service and Colab Additional Terms
+   - Role: Cloud runtime used for GPU-accelerated training (YOLOv8m) and CPU verification.
+
+B. Google Drive
+   - Organization: Google LLC
+   - Role: Cloud storage directory mounted at '/content/drive/MyDrive/deeplearning'
+     for persistent dataset storage and checkpoint archival.
+
+--------------------------------------------------------------------------------
+6. EXTERNAL ASSETS, IMAGES & DIAGRAMS
+--------------------------------------------------------------------------------
+- Test Images: Sample images shown in the documentation and outputs originate
+  from the FloW test set hosted on Roboflow Universe (licensed under CC BY 4.0).
+- System Architecture Diagrams: Original technical diagrams generated via Mermaid
+  markup specifically for this project repository.
+- Badges: Generated using Shields.io (https://shields.io/).
+- Icons / Logos: Brand icons rendered via Shields.io endpoints are trademarks of
+  their respective owners (Python, Ultralytics, Meta, PyTorch, Google Colab).
+- No proprietary stock photographs, commercial fonts, or unlicensed artistic assets
+  have been included in this repository.
+
+--------------------------------------------------------------------------------
+7. SUMMARY OF PERMISSIONS & OBLIGATIONS
+--------------------------------------------------------------------------------
+1. FloW Dataset: Reusable under CC BY 4.0 with required academic attribution (provided above).
+2. SAM 2.1: Reusable under Apache-2.0 with copyright preservation and notices.
+3. Ultralytics YOLOv8: Open-source under AGPL-3.0. Non-commercial and academic usage is
+   permitted provided the repository remains open source under a compatible copyleft
+   license if redistributed or hosted as a public service.
+4. Python Scientific Stack: Reusable under permissive BSD, MIT, and Apache licenses.
+
+If you believe any credit, license citation, or attribution is missing or inaccurate,
+please open an issue on the project GitHub repository.
+================================================================================

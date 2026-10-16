@@ -1,0 +1,13 @@
+{
+    "project": "Plastic Waste Detection and Segmentation",
+    "detector": "YOLOv8m",
+    "segmenter": "SAM 2.1 Small",
+    "device": "cpu",
+    "images_processed": 3,
+    "total_detections": 10,
+    "annotated_output_directory": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/annotated",
+    "mask_output_directory": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/masks",
+    "metadata_output_directory": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/metadata",
+    "results_csv": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/end_to_end_results.csv",
+    "timestamp": "2026-10-11T18:18:26"
+}

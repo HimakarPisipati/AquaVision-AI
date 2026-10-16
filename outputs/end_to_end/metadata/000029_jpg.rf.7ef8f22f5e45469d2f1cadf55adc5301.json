@@ -1,0 +1,102 @@
+{
+    "input_image": "/content/drive/MyDrive/deeplearning/Dataset/Dataset_for_yolo/test/images/000029_jpg.rf.7ef8f22f5e45469d2f1cadf55adc5301.jpg",
+    "image_width": 640,
+    "image_height": 640,
+    "device": "cpu",
+    "detector": "YOLOv8m",
+    "segmenter": "SAM 2.1 Small",
+    "detection_count": 6,
+    "annotated_image": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/annotated/000029_jpg.rf.7ef8f22f5e45469d2f1cadf55adc5301_segmented.png",
+    "detections": [
+        {
+            "object_id": 1,
+            "class_name": "bottle",
+            "yolo_confidence": 0.8371046185493469,
+            "sam_predicted_iou": 0.9467220902442932,
+            "bbox_xyxy": [
+                199.73358154296875,
+                411.1495361328125,
+                231.55630493164062,
+                470.7137451171875
+            ],
+            "mask_pixels": 1556,
+            "mask_area_percentage_of_image": 0.3798828125,
+            "mask_path": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/masks/000029_jpg.rf.7ef8f22f5e45469d2f1cadf55adc5301_object_1.png"
+        },
+        {
+            "object_id": 2,
+            "class_name": "bottle",
+            "yolo_confidence": 0.7771487832069397,
+            "sam_predicted_iou": 0.9034223556518555,
+            "bbox_xyxy": [
+                447.8436279296875,
+                300.04901123046875,
+                476.160400390625,
+                320.79583740234375
+            ],
+            "mask_pixels": 550,
+            "mask_area_percentage_of_image": 0.13427734375,
+            "mask_path": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/masks/000029_jpg.rf.7ef8f22f5e45469d2f1cadf55adc5301_object_2.png"
+        },
+        {
+            "object_id": 3,
+            "class_name": "bottle",
+            "yolo_confidence": 0.7029757499694824,
+            "sam_predicted_iou": 0.8451084494590759,
+            "bbox_xyxy": [
+                497.94329833984375,
+                281.71966552734375,
+                515.9686889648438,
+                296.67218017578125
+            ],
+            "mask_pixels": 167,
+            "mask_area_percentage_of_image": 0.040771484375,
+            "mask_path": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/masks/000029_jpg.rf.7ef8f22f5e45469d2f1cadf55adc5301_object_3.png"
+        },
+        {
+            "object_id": 4,
+            "class_name": "bottle",
+            "yolo_confidence": 0.6475958228111267,
+            "sam_predicted_iou": 0.8746302723884583,
+            "bbox_xyxy": [
+                390.80364990234375,
+                304.17926025390625,
+                409.78948974609375,
+                323.83184814453125
+            ],
+            "mask_pixels": 329,
+            "mask_area_percentage_of_image": 0.080322265625,
+            "mask_path": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/masks/000029_jpg.rf.7ef8f22f5e45469d2f1cadf55adc5301_object_4.png"
+        },
+        {
+            "object_id": 5,
+            "class_name": "bottle",
+            "yolo_confidence": 0.5738113522529602,
+            "sam_predicted_iou": 0.895589292049408,
+            "bbox_xyxy": [
+                396.77081298828125,
+                320.6877746582031,
+                426.18280029296875,
+                340.8963317871094
+            ],
+            "mask_pixels": 523,
+            "mask_area_percentage_of_image": 0.127685546875,
+            "mask_path": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/masks/000029_jpg.rf.7ef8f22f5e45469d2f1cadf55adc5301_object_5.png"
+        },
+        {
+            "object_id": 6,
+            "class_name": "bottle",
+            "yolo_confidence": 0.5716477036476135,
+            "sam_predicted_iou": 0.8046654462814331,
+            "bbox_xyxy": [
+                140.08544921875,
+                261.2452392578125,
+                149.54486083984375,
+                272.70526123046875
+            ],
+            "mask_pixels": 77,
+            "mask_area_percentage_of_image": 0.018798828125,
+            "mask_path": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/masks/000029_jpg.rf.7ef8f22f5e45469d2f1cadf55adc5301_object_6.png"
+        }
+    ]
+}

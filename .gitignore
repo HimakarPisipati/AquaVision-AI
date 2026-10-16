@@ -1,0 +1,53 @@
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+backend/venv/
+.venv/
+env/
+ENV/
+
+# Model Checkpoints & Large Weights
+# Checkpoints must not be committed to GitHub due to size (>50MB-180MB) and licensing boundaries
+*.pt
+*.pth
+*.onnx
+*.engine
+*.download
+backend/artifacts/
+models/
+results/yolov8m_training/plastic_bottle_yolov8m/weights/
+
+# Large Datasets & Raw Image Batches
+dataset/train/
+dataset/valid/
+dataset/test/
+Dataset/Dataset_for_yolo/
+*.zip
+*.tar
+*.tar.gz
+
+# Node & Frontend Build Artifacts
+node_modules/
+frontend/node_modules/
+.nitro/
+dist/
+build/
+.output/
+
+# Environment Variables & Secrets (Prevent accidental leaks of tokens/credentials)
+.env
+.env.local
+.env.*
+*.env
+!*.env.example
+
+# IDE & OS Specific Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Cloned External Repositories
+backend/sam2_repo/
+sam2/

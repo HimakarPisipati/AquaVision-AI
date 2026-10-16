@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['bottle']
+
+roboflow:
+  workspace: waste-detection-zxduh
+  project: flow-9dt9s-ysldg
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/waste-detection-zxduh/flow-9dt9s-ysldg/dataset/1

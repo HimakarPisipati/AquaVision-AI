@@ -1,0 +1,4 @@
+split,images,readable_images,images_with_label_files,annotated_objects,unreadable_images,missing_label_files
+test,200,100,200,0,100,0
+train,4202,100,4200,0,4102,2
+val,401,100,400,0,301,1

@@ -1,0 +1,42 @@
+{
+    "input_image": "/content/drive/MyDrive/deeplearning/Dataset/Dataset_for_yolo/test/images/000007_jpg.rf.3532977b58bf11e5c3b0c8577bf22dbc.jpg",
+    "image_width": 640,
+    "image_height": 640,
+    "device": "cpu",
+    "detector": "YOLOv8m",
+    "segmenter": "SAM 2.1 Small",
+    "detection_count": 2,
+    "annotated_image": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/annotated/000007_jpg.rf.3532977b58bf11e5c3b0c8577bf22dbc_segmented.png",
+    "detections": [
+        {
+            "object_id": 1,
+            "class_name": "bottle",
+            "yolo_confidence": 0.7318804860115051,
+            "sam_predicted_iou": 0.8852948546409607,
+            "bbox_xyxy": [
+                300.11474609375,
+                247.746826171875,
+                326.855712890625,
+                262.8960876464844
+            ],
+            "mask_pixels": 278,
+            "mask_area_percentage_of_image": 0.06787109375,
+            "mask_path": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/masks/000007_jpg.rf.3532977b58bf11e5c3b0c8577bf22dbc_object_1.png"
+        },
+        {
+            "object_id": 2,
+            "class_name": "bottle",
+            "yolo_confidence": 0.5937003493309021,
+            "sam_predicted_iou": 0.7855720520019531,
+            "bbox_xyxy": [
+                145.6563720703125,
+                262.08941650390625,
+                158.55743408203125,
+                275.1929931640625
+            ],
+            "mask_pixels": 118,
+            "mask_area_percentage_of_image": 0.02880859375,
+            "mask_path": "/content/drive/MyDrive/deeplearning/outputs/end_to_end/masks/000007_jpg.rf.3532977b58bf11e5c3b0c8577bf22dbc_object_2.png"
+        }
+    ]
+}

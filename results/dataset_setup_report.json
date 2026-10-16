@@ -1,0 +1,22 @@
+{
+    "project_name": "Plastic Waste Detection and Segmentation",
+    "detector": "YOLOv8m",
+    "segmenter": "SAM 2.1 Small",
+    "project_directory": "/content/drive/MyDrive/deeplearning",
+    "dataset_directory": "/content/drive/MyDrive/deeplearning/Dataset/Dataset_for_yolo",
+    "data_yaml": "/content/drive/MyDrive/deeplearning/Dataset/Dataset_for_yolo/data.yaml",
+    "class_names": [
+        "bottle"
+    ],
+    "number_of_classes": 1,
+    "image_counts": {
+        "train": 0,
+        "val": 0,
+        "test": 0
+    },
+    "split_paths": {
+        "train": "/content/drive/MyDrive/deeplearning/Dataset/train/images",
+        "val": "/content/drive/MyDrive/deeplearning/Dataset/valid/images",
+        "test": "/content/drive/MyDrive/deeplearning/Dataset/test/images"
+    }
+}

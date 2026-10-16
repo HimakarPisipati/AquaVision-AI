@@ -1,0 +1,10 @@
+{
+    "total_images_inspected": 4803,
+    "unreadable_images": 0,
+    "missing_label_files": 3,
+    "annotation_errors": 12709,
+    "valid_bounding_boxes": 0,
+    "training_split_found": true,
+    "validation_split_found": true,
+    "ready_for_manual_review": false
+}
